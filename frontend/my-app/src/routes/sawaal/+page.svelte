@@ -1,5 +1,6 @@
 <script>
 // @ts-nocheck
+let API_URL=import.meta.env.VITE_API_URL 
 import { onMount } from "svelte";
 let messages = [];
 let loading = true;
@@ -8,7 +9,7 @@ let error = null;
 let readStatus = [];
 onMount(async () => {
 try {
-const res = await fetch("http://localhost:3000/messages");
+const res = await fetch(`${API_URL}/messages` );
 if (!res.ok) throw new Error("Failed to fetch messages");
 messages = await res.json();
 // Initialize all as unread (false)
