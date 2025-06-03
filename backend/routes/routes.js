@@ -16,7 +16,7 @@ routes.post("/message", async (req, res) => {
   const result = await addData(message);
 
   if (result.success) {
-    return res.status(200).json({ message: "Message inserted successfully" });
+    return res.status(200).json({ message: "Message Received!" });
   } else {
     return res.status(500).json({ error: "Failed to insert message" });
   }
