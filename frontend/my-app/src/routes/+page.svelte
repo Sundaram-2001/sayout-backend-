@@ -35,7 +35,7 @@
     submitting = true;
 
     try {
-      const response = await fetch('http://localhost:3000/message', {
+      const response = await fetch(`${API_URL}/message`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
